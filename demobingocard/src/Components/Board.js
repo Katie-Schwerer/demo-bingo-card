@@ -17,7 +17,7 @@ function Board() {
           ))}
         </section>
         <section className="buttons">
-          <button className="download" onClick={handleDownload}>Download Bingo Card as PNG</button>
+          <button className="download">Download Bingo Card as PNG</button>
           <button className="submit-button">Digital board</button>
         </section>
       </main>
