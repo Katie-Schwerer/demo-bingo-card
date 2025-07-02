@@ -1,4 +1,4 @@
-import {useRef} from 'react';
+import React, {useRef} from 'react';
 import data from './data';
 import Card from './Card';
 import '../Styles/Board.css';
@@ -13,12 +13,12 @@ function Board() {
         <h1>Bingo Board</h1>
         <section className="bingo-grid" ref={boardRef}>
           {data.map((item, index) => (
-            <Card key={index} title={item.name} />
+            <Card key={index} title={item.name} image={item.image_url} website={item.website_url} description={item.description} direction={item.google_maps_url} />
           ))}
         </section>
         <section className="buttons">
           <button className="download">Download Bingo Card as PNG</button>
-          <button className="submit-button">Digital board</button>
+          <button className="submit-button">Digital Board</button>
         </section>
       </main>
     </div>

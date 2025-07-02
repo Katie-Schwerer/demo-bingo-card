@@ -1,4 +1,4 @@
-import useState from 'react';
+import React, { useState } from 'react';
 import '../Styles/Survey.css'
 
 const questions = [
@@ -87,25 +87,28 @@ function Survey() {
     return (
         <main>
             <form>
-                {questions[currentQuestionIndex] === "radio" ? (
+                {questions[currentQuestionIndex].type === "radio" ? (
                     <fieldset>
                         <legend>{questions[currentQuestionIndex].question}</legend>
                         {questions[currentQuestionIndex].options.map(item => (
-                            <label key={opt}>
-                                <input type="radio" value={item} checked={selected === opt}/>{item}
+                            <label key={item}>
+                                <input type="radio" value={item} />{item}
                             </label>
                         ))}
                     </fieldset>
-                ): questions[currentQuestionIndex] === "checkbox" ? (
+                ): questions[currentQuestionIndex].type === "checkbox" ? (
                     <fieldset>
-                        <legend>{questions[currentQuestionIndex].questions}</legend>
+                        <legend>{questions[currentQuestionIndex].question}</legend>
                         {questions[currentQuestionIndex].options.map(item => (
-                            <label key={opt}>
-                                <input type="checkbeox" value={item} checked={selected === opt}/>{item}
+                            <label key={item}>
+                                <input type="checkbox" value={item} />{item}
                             </label>
                         ))}
                     </fieldset>
-                ): <input type="text"/>}
+                ): <div>
+                        <h3>{questions[currentQuestionIndex].question}</h3>
+                        <textarea></textarea>
+                    </div>}
             </form>
             <button onClick={handlePrevious} disabled={currentQuestionIndex === 0}> Previous</button>
             <button onClick={handleNext} disabled={currentQuestionIndex === questions.length - 1}> Next</button>

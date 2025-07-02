@@ -8,7 +8,7 @@ function Title() {
         <main>
             <h1>Western NC Tourism Bingo Survey</h1>
             <hr></hr>
-
+            
             <button onClick={() => navigate("/survey")}>Start Survey</button>
         </main>
     )

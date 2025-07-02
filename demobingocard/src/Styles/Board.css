@@ -32,3 +32,21 @@
     width: 800px;
     margin: 28px auto;
 }
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+    
+.links button {
+    background-color: white;
+    color: black;
+    padding: 3px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.links button:hover {
+    background-color: #f0f0f0;
+}
