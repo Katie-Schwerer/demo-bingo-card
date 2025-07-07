@@ -110,8 +110,8 @@ function Survey() {
                         <textarea></textarea>
                     </div>}
             </form>
-            <button onClick={handlePrevious} disabled={currentQuestionIndex === 0}> Previous</button>
-            <button onClick={handleNext} disabled={currentQuestionIndex === questions.length - 1}> Next</button>
+            <button onClick={handlePrevious} type="button" aria-label='Previous Question' disabled={currentQuestionIndex === 0}> Previous</button>
+            <button onClick={handleNext} type="button" aria-label='Next Question' disabled={currentQuestionIndex === questions.length - 1}> Next</button>
         </main>
     );
 }

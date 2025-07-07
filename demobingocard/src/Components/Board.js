@@ -16,8 +16,8 @@ function Board() {
           ))}
         </section>
         <section className="buttons">
-          <button className="download" onClick={() => nagivate("/download")}>Download Bingo Card</button>
-          <button className="submit-button">Digital Board</button>
+          <button className="download" type="button" aria-label="Download Bingo Card" onClick={() => nagivate("/download")}>Download Bingo Card</button>
+          <button className="submit-button" type="button" aria-label='Digital Board'>Digital Board</button>
         </section>
       </main>
     </div>

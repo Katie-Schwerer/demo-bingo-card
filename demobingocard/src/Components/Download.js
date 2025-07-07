@@ -32,7 +32,7 @@ function Download() {
                     ))}
                 </section>
                 <section className='buttons'>
-                    <button className='download' onClick={handleDownload}>Download Bingo Card as PNG</button>
+                    <button className='download' onClick={handleDownload} type="button" aria-label='Download bingo card as PNG'>Download Bingo Card as PNG</button>
                 </section>
             </main>
         </div>
